@@ -623,7 +623,7 @@ function changePower(slot = 0, power = 0) {
     if (state.players[state.infos.id].states.includes("Died")) return;
     power = Number(power);
     if (!powers.has(power)) return;
-    /*if (slot) {
+    if (slot) {
         if (power == power0.value) {
             power0.value = power1.value;
             sendWs({
@@ -653,7 +653,7 @@ function changePower(slot = 0, power = 0) {
             }, clientWS);
         }
         power0.value = power;
-    }*/
+    }
     if (slot == 0 && power == power2Value)
         power2Value = power1Value;
     else if (slot == 1 && power == power1Value)
